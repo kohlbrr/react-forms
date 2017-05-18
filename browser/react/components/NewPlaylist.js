@@ -7,6 +7,7 @@ const NewPlaylist = (props) => {
         className="form-horizontal"
         onSubmit={props.handleSubmit}>
       <fieldset>
+      <div style={{display: props.warningDisplay}} className="alert alert-warning">{props.warningMessage}</div>
       <legend>New Playlist</legend>
       <div className="form-group">
         <label className="col-xs-2 control-label">Name</label>
