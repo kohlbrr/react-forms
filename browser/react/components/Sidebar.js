@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router';
+// import NewPlaylistContainer from '../containers/NewPlaylistContainer'
 
 const Sidebar = (props) => {
+  console.log(props)
 
   return (
     <sidebar>
@@ -20,12 +22,23 @@ const Sidebar = (props) => {
       <hr />
         <section>
           <h4 className="text-muted">PLAYLISTS</h4>
+                { props.playlists.map(playlist => {
+                  return (
+                    <ul className="list-unstyled">
+                      <li className="playlist-item menu-item">
+                        <Link to="FILL_ME_IN">{playlist.name}</Link>
+                      </li>
+                    </ul>
+                  )}
+                )}
           <h4>
             <Link className="btn btn-primary btn-block" to={`/playlists`}>
             <span className="glyphicon glyphicon-plus"></span> PLAYLIST
             </Link>
           </h4>
         </section>
+
+        
     </sidebar>
   );
 }

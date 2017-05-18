@@ -16,6 +16,7 @@ class FilterableArtistsContainer extends React.Component {
   handleChange(event) {
     const inputValue = event.target.value;
     this.setState({ inputValue });
+
   }
   render() {
     const inputValue = this.state.inputValue;
