@@ -26,7 +26,7 @@ const Sidebar = (props) => {
                   return (
                     <ul className="list-unstyled">
                       <li className="playlist-item menu-item">
-                        <Link to="FILL_ME_IN">{playlist.name}</Link>
+                        <Link to="/playlists/${playlist.id}">{playlist.name}</Link>
                       </li>
                     </ul>
                   )}
